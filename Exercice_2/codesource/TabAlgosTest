@@ -1,0 +1,125 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class TabAlgosTest {
+
+    // Tests pour plusGrand()
+    @Test
+    public void testPlusGrandEntiersPositifs() {
+        int[] tab = {3, 4, 5, 6, 7};
+        assertEquals(7, TabAlgos.plusGrand(tab));
+    }
+
+    @Test
+    public void testPlusGrandEntiersIdentiques() {
+        int[] tab = {7, 7, 7, 7};
+        assertEquals(7, TabAlgos.plusGrand(tab));
+    }
+
+    @Test
+    public void testPlusGrandEntiersNegatifs() {
+        int[] tab = {-6, -5, -4, -3, -2, -1};
+        assertEquals(-1, TabAlgos.plusGrand(tab));
+    }
+
+    @Test
+    public void testPlusGrandTableauUnSeulEntier() {
+        int[] tab = {15};
+        assertEquals(15, TabAlgos.plusGrand(tab));
+    }
+
+    @Test
+    public void testPlusGrandTableauVideOuNull() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            TabAlgos.plusGrand(new int[] {});
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            TabAlgos.plusGrand(null);
+        });
+    }
+
+    // Tests pour moyenne()
+    @Test
+    public void testMoyenneEntiersPositifs() {
+        int[] tab = {3, 4, 5, 6, 7};
+        assertEquals(5.0, TabAlgos.moyenne(tab));
+    }
+
+    @Test
+    public void testMoyenneEntiersNegatifs() {
+        int[] tab = {-6, -5, -4, -3, -2, -1};
+        assertEquals(-3.5, TabAlgos.moyenne(tab));
+    }
+
+    @Test
+    public void testMoyenneTableauUnSeulEntier() {
+        int[] tab = {15};
+        assertEquals(15.0, TabAlgos.moyenne(tab));
+    }
+
+    @Test
+    public void testMoyenneTableauVideOuNull() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            TabAlgos.moyenne(new int[] {});
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            TabAlgos.moyenne(null);
+        });
+    }
+
+    // Tests pour egaux()
+    @Test
+    public void testEgauxTableauxEgaux() {
+        int[] tab1 = {7, 8, 9};
+        int[] tab2 = {7, 8, 9};
+        assertTrue(TabAlgos.egaux(tab1, tab2));
+    }
+
+    @Test
+    public void testEgauxTableauxDifferentsMemeTaille() {
+        int[] tab1 = {1, 2, 3};
+        int[] tab2 = {4, 5, 6};
+        assertFalse(TabAlgos.egaux(tab1, tab2));
+    }
+
+    @Test
+    public void testEgauxTableauxDifferenteTaille() {
+        int[] tab1 = {1, 2, 3};
+        int[] tab2 = {3, 4, 5, 7};
+        assertFalse(TabAlgos.egaux(tab1, tab2));
+    }
+
+    @Test
+    public void testEgauxTableauVideOuNull() {
+        assertFalse(TabAlgos.egaux(new int[] {}, new int[] {}));
+        assertFalse(TabAlgos.egaux(null, null));
+    }
+
+    // Tests pour similaires()
+    @Test
+    public void testSimilairesTableauxMemeTailleOrdreDifferents() {
+        int[] tab1 = {7, 8, 9};
+        int[] tab2 = {9, 8, 7};
+        assertTrue(TabAlgos.similaires(tab1, tab2));
+    }
+
+    @Test
+    public void testSimilairesTableauxDifferents() {
+        int[] tab1 = {1, 2, 3};
+        int[] tab2 = {4, 5, 6};
+        assertFalse(TabAlgos.similaires(tab1, tab2));
+    }
+
+    @Test
+    public void testSimilairesTableauxDifferenteTaille() {
+        int[] tab1 = {2, 3, 4};
+        int[] tab2 = {2, 3};
+        assertFalse(TabAlgos.similaires(tab1, tab2));
+    }
+
+    @Test
+    public void testSimilairesTableauVideOuNull() {
+        assertFalse(TabAlgos.similaires(new int[] {}, new int[] {}));
+        assertFalse(TabAlgos.similaires(null, null));
+    }
+}

@@ -1,0 +1,19 @@
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TabAlgosTest
+Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.456 sec <<< FAILURE!
+
+Failures: 
+  TabAlgosTest.testEgauxTableauVideOuNull:104 expected: <false> but was: <true>
+  TabAlgosTest.testSimilairesTableauVideOuNull:132 expected: <false> but was: <true>
+Results :
+
+Tests run: 18, Failures: 2, Errors: 0, Skipped: 0
+
+------------------------------------------------------------------------
+BUILD FAILURE
+------------------------------------------------------------------------
+Total time:  9.459 s
+Finished at: 2024-09-28T20:04:46Z
+-----------------------------------------------------------------------------------------------------------------------------------------------

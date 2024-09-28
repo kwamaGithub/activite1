@@ -1,0 +1,26 @@
+
+C:\Users\kokou.djimissa\Documents\codesource>java -jar ..\checkstyle-10.18.1-all.jar -c sun_checks.xml Produit.java
+Début de la vérification...
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:1: Le fichier package-info.java est manquant. [JavadocPackage]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:1: La première ligne de la Javadoc doit se terminer avec un point. [JavadocStyle]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:3:5: Commentaire Javadoc manquant. [JavadocVariable]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:4:5: Commentaire Javadoc manquant. [JavadocVariable]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:5:5: Commentaire Javadoc manquant. [JavadocVariable]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:5:12: La variable 'tva' devrait être privée et avoir des accesseurs. [VisibilityModifier]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:5:18: '0.20' devrait être défini comme une constante. [MagicNumber]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:7:5: Commentaire Javadoc manquant. [MissingJavadocMethod]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:7:20: Le paramètre reference devrait être final. [FinalParameters]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:7:27: 'reference' masque un attribut. [HiddenField]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:16: La première ligne de la Javadoc doit se terminer avec un point. [JavadocStyle]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:17:31: Le paramètre prix devrait être final. [FinalParameters]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:17:38: 'prix' masque un attribut. [HiddenField]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:17:38: Balise Javadoc @param manquante pour 'prix'. [JavadocMethod]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:26:9: L'instruction 'if' devrait utiliser des accolades ('{' et '}'). [NeedBraces]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:32:5: La définition de la méthode 'equals()' doit toujours être accompagnée de la définition de la méthode 'hashCode()'. 
+[EqualsHashCode]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:32:5: La classe 'Produit' semble être conçue pour extension (peut être héritée), mais la méthode'equals' 
+n'a pas de Javadoc qui explique comment le faire en toute sécurité. Si la classe n'est pas conçue pour extension, envisagez de rendre la classe 'Produit'
+ finale ou de rendre la méthode 'equals' static/final/abstract/empty, d'ajouter les annotations permises pour la méthode. [DesignForExtension]
+[ERROR] C:\Users\kokou.djimissa\Documents\codesource\Produit.java:33:27: Le paramètre o devrait être final. [FinalParameters]
+Vérification terminée.
+Checkstyle se termine par 18 erreurs.
